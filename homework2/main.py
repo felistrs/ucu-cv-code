@@ -27,7 +27,7 @@ def match_brute_force(descr_arr0, descr_arr1):
     return matches_arr
 
 
-for test_name in ['translation_', 'rotation_']:
+for test_name in ['translation_', 'translation_noise_', 'rotation_2_', 'rotation_5_']:
     for frame_idx in range(9):
         # read two frames
         img0_fpath = img_in_path + test_name + str(frame_idx) + '.png'

@@ -13,11 +13,10 @@ def detect_keypoints_and_calculate_descriptors(img):
     # keypoints
     kp_arr = []
 
-    # cv_kp_arr = fast.detect(img_blur, None)
-    cv_kp_arr = orb.detect(img_blur, None)
+    cv_kp_arr = fast.detect(img_blur, None)
 
     # descriptors
-    cv_kp_arr, cv_descr_arr = orb.compute(img, cv_kp_arr)
+    cv_kp_arr, cv_descr_arr = orb.compute(img_blur, cv_kp_arr)
 
     for i in range(len(cv_kp_arr)):
         kp_arr.append((
